@@ -1,0 +1,32 @@
+doctype.html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    
+    title Frane's StartedKit
+    
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='img/favicon.ico')
+    //link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+
+    // awesome font
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    
+    // problem with getting bootstrap from bower_components
+    // link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
+    
+    // custom css style
+    link(rel='stylesheet', href='css/main.min.css')
+    
+  
+
+    body
+        include includes/preloader.jade
+        
+        .wrapper
+          include includes/home-page.jade
+      
+        // all javascript from gulp task 'scripts'
+        script(src='js/all.js')
+        

@@ -1,0 +1,73 @@
+h1,h2,h3,h4,h5,h6
+    font:
+        family: 'Lato', sans-serif
+
+h1
+    font:
+        size: 4.5rem
+        weight: 700
+    text-transform: uppercase
+    margin: 0
+    line-height: 1.2
+
+h2
+    font:
+        size: 2.25rem
+        weight: 700
+    text-transform: uppercase
+    margin-top: 0px
+    color: pink
+
+h3
+    font:
+        size: 1.875rem
+        weight: 700
+    text-transform: uppercase
+
+h4
+    font:
+        size: 1.5rem
+        weight: 700
+    text-transform: uppercase
+
+h5
+    font:
+        size: 1.25rem
+        style: italic
+    text-transform: lowercase
+    color: yellow
+
+    &.fancy
+        text-align: center
+
+        span
+            display: inline-block
+            position: relative
+
+            &:after,
+            &:before
+                content: ""
+                position: absolute
+                height: 1px
+                width: 40px
+                border-top: 1px solid orange
+                top: 10px
+
+        span:after
+            left: 100%
+            margin-left: 10px
+
+        span:before
+            right: 100%
+            margin-right: 10px
+
+
+h6
+    font:
+        size: 1.125rem
+        weight: 700
+    text-transform: lowercase
+
+p
+    font-weight: normal
+    color: white

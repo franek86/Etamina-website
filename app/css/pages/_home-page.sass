@@ -1,0 +1,173 @@
+section#header
+  background:
+    color: #B4DAFA
+
+  .header-heading
+    padding-top: 60px
+    position: relative
+    z-index: 5
+
+    h1,
+    p
+      text-align: center
+      color: #115673
+      text-transform: uppercase
+      animation: fadeIn .8s both 1s
+
+    p
+      font-size: 1rem
+      margin: 0
+
+  .sky
+
+    .cloud
+      position: absolute
+      overflow-x: hidden
+
+    .cloud:nth-child(1)
+        width: 100px
+        top: 10%
+        opacity: .95
+        animation: moveCloudes 45s linear infinite
+
+    .cloud:nth-child(2)
+        width: 200px
+        top: 25%
+        animation: moveCloudes 52s linear infinite
+
+    .cloud:nth-child(3)
+        width: 250px
+        top: 20%
+        opacity: .8
+        animation: moveCloudes 55s linear infinite
+
+    .cloud:nth-child(4)
+        width: 300px
+        top: 40%
+        opacity: .75
+        animation: moveCloudes 60s linear infinite
+
+    .cloud:nth-child(5)
+        width: 275px
+        top: 0%
+        opacity: 1
+        animation: moveCloudes 70s linear infinite
+
+    .clear
+      both
+
+  .ufo-wrapper
+    position: relative
+    max-width: 320px
+    text-align: center
+    margin: 0 auto
+
+    .ufo
+      width: 200px
+      z-index: 10
+      animation: landUfo 5s ease 2.3s forwards
+      opacity: 0
+
+  .buildings
+    position: relative
+    margin: 0 auto
+    text-align: center
+
+    .alien
+      position: absolute
+      top: 0
+      left:calc(50% - 30px)
+      width: 60px
+      opacity: 0
+      z-index: 9
+      animation: fadeAlien 5s ease 6s forwards
+
+      .clear
+        both
+
+    .building
+      max-width: 300px
+      animation: fadeBuilding .8s both 2s
+    
+
+
+// ANIMATIONS
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+@keyframes fadeBuilding
+  0%
+    opacity: 0
+
+  50%
+    opacity: .5
+
+  100%
+    opacity: 1
+
+@keyframes fadeAlien
+  0%
+    transform: translateY(0%)
+    opacity: 0
+
+  100%
+    transform: translateY(240px)
+    opacity: 1
+
+@keyframes moveCloudes
+  from
+    left: 0px
+
+  to
+    left: 100%
+
+@keyframes landUfo
+  0%
+    transform:  scale(0.1)
+    opacity: 0.5
+
+  100%
+      transform:  scale(1.5)
+      opacity: 1
+
+
+// media query from small phones, with max width 320px
+
+@media only screen and (max-width: 321px)
+  section#header
+    .buildings
+      .alien
+        width: 40px
+
+    @keyframes fadeAlien
+      0%
+        transform: translateY(0%)
+        opacity: 0
+
+      100%
+        transform: translateY(184px)
+        opacity: 1
+
+
+// media query from smart phones and tablets, with max width 736px
+
+@media only screen and (max-width: 736px)
+  section#header
+    height: auto
+
+    .header-heading
+      h1
+        font-size: 2rem
+        z-index: 9
+
+    .ufo
+      max-width: 100px
+
+    .buildings
+      .building
+        width: 100%
