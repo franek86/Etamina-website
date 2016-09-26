@@ -1,9 +1,4 @@
 $(function(){
-  preloader();
-  mesHeight();
-});
-
-function preloader(){
 
   var percent = $.animateNumber.numberStepFactories.append(' %');
 
@@ -12,12 +7,15 @@ function preloader(){
     numberStep: percent
   },1500);
 
-}
 
-function mesHeight(){
   var section = $('section').height();
   $('span').html(section);
-}
+
+  $('#about').waypoint(function(direction) {
+    $('.robot-1').addClass('animated moveRobot');
+  });
+
+});
 
 
 $(window).on("load",function(){

@@ -1,0 +1,21 @@
+section#about
+  background:
+    color: pink
+
+  .animation
+    opacity: 0
+
+    &.animated
+      opacity: 1
+
+  .robots
+    position: relative
+    margin: 0 auto
+    text-align: center
+
+    .robot-1
+      max-width: 600px
+
+      &.moveRobot
+        animation-name: moveRobot
+        animation-duration: 3s
