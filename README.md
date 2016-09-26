@@ -1,2 +1,2 @@
 # Etamina-website
-Animation web site
+Animation web site, still in production
