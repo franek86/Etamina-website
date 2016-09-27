@@ -3,13 +3,12 @@ section#header
     color: #B4DAFA
 
   .header-heading
-    padding-top: 60px
+    padding: 2.5rem
     position: relative
     z-index: 5
 
     h1,
     p
-      text-align: center
       color: #115673
       text-transform: uppercase
       animation: fadeIn .8s both 1s
@@ -69,14 +68,17 @@ section#header
       opacity: 0
 
   .buildings
-    position: relative
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
     margin: 0 auto
     text-align: center
 
     .alien
       position: absolute
       top: 0
-      left:calc(50% - 30px)
+      left:calc(50% - 2.14rem)
       width: 60px
       opacity: 0
       z-index: 9
@@ -88,7 +90,7 @@ section#header
     .building
       max-width: 300px
       animation: fadeBuilding .8s both 2s
-    
+
 
 
 // ANIMATIONS
@@ -141,6 +143,7 @@ section#header
 @media only screen and (max-width: 321px)
   section#header
     .buildings
+      position: relative
       .alien
         width: 40px
 
@@ -169,5 +172,6 @@ section#header
       max-width: 100px
 
     .buildings
+      position: relative
       .building
         width: 100%

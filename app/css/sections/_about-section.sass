@@ -1,6 +1,10 @@
 section#about
+  position: relative
   background:
-    color: pink
+    color: #083458
+
+  h1
+    color: white
 
   .animation
     opacity: 0
@@ -9,13 +13,15 @@ section#about
       opacity: 1
 
   .robots
-    position: relative
-    margin: 0 auto
-    text-align: center
 
-    .robot-1
-      max-width: 600px
+    .robot
+      position: absolute
+      left: 0
+      max-width: 400px
 
       &.moveRobot
         animation-name: moveRobot
         animation-duration: 3s
+
+      .clear
+        both
