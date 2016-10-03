@@ -1,9 +1,17 @@
-section#about
+section#about.cf
 
-  .container
+  .container.cf
   
-    .heading
+    .about-heading
       h1 About us
       
-    .robots
-      //- image(src="img/robot.svg" class="robot") 
+    .col
+      .monsters.animation(data-animation-name="zoomInLeft" data-animation-delay=".8s")
+        image(src="img/red-alien.svg" class="red-monster")
+    
+    .col
+      .about-content
+        .cloudlet.animation(data-animation-name="fadeInRight" data-animation-delay="1s")
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        
+      

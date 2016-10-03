@@ -8,12 +8,30 @@ $(function(){
   },1500);
 
 
-  var section = $('section').height();
-  $('span').html(section);
+  function onScrollInit( items, trigger ) {
+  items.each( function() {
+    var osElement = $(this),
+        osAnimationClass = osElement.attr('data-animation-name'),
+        osAnimationDuration = osElement.attr('data-animation-duration'),
+        osAnimationDelay = osElement.attr('data-animation-delay');
 
-  $('#about').waypoint(function(direction) {
-    $('.robot-1').addClass('animated moveRobot');
+        osElement.css({
+          'animation-duration':          osAnimationDuration,
+          'animation-delay':          osAnimationDelay
+        });
+
+        var osTrigger = ( trigger ) ? trigger : osElement;
+
+        osTrigger.waypoint(function() {
+          osElement.addClass('animated').addClass(osAnimationClass);
+          },{
+              triggerOnce: true,
+              offset: '100%'
+        });
   });
+}
+
+ onScrollInit( $('.animation') );
 
 });
 

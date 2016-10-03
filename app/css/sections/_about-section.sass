@@ -1,27 +1,29 @@
 section#about
+  height: auto
   position: relative
   background:
-    color: #083458
+    color: $blue
 
-  h1
-    color: white
+  .about-heading
+    h1
+      color: $white
 
-  .animation
-    opacity: 0
+  .about-content
+    margin-top: calc(50% - 120px)
+    position: relative
 
-    &.animated
-      opacity: 1
+    .cloudlet
+      border: 5px solid #5883a7
+      padding: 15px
+      border-radius: 35px 35px 35px 0px
 
-  .robots
 
-    .robot
-      position: absolute
-      left: 0
-      max-width: 400px
+  .monsters
+    position: relative
+    margin-top: 4rem
 
-      &.moveRobot
-        animation-name: moveRobot
-        animation-duration: 3s
+    .red-monster
+      width: 100%
+  
 
-      .clear
-        both
+// @media and only screen(max-width: $sm-screen)

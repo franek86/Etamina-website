@@ -21,6 +21,7 @@
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "waypoints": "^4.0.1",
-    "jquery-animateNumber": "jquery.animateNumber#^0.0.13"
+    "jquery-animateNumber": "jquery.animateNumber#^0.0.13",
+    "animate.css": "^3.5.2"
   }
 }

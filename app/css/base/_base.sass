@@ -1,6 +1,9 @@
+*
+  box-sizing: border-box
+
 body,
 html
-  background-color: #D1FFF2
+  background-color: $light-blue
   font-size: 14px
   line-height: 1.6
   font-family: 'Lato', sans-serif
@@ -9,6 +12,22 @@ html
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
   height: 2000px
+
+  .animation
+    opacity: 0
+
+    &.animated
+      opacity: 1
+
+
+  .cf:before,
+  .cf:after
+    content: " "
+    display: table
+  .cf:after
+    clear: both
+  .cf
+    *zoom: 1
 
   .wrapper
     opacity: 1
@@ -20,26 +39,34 @@ html
     section
       height: 95vh
       position: relative
-      padding-top: 5rem
+      padding-top: 4rem
 
       .container
-        width: 1440px
+        width: 960px
+        height: auto
         max-width: 90%
         margin-right: auto
         margin-left: auto
         padding-right: 10px
         padding-left: 10px
 
-// @media only screen and (min-width: 1500px)
-//   .container
-//     width: 1440px
-//
-// @media only screen and (min-width: 992px)
-//   .container
-//     width: 960px
+        .col
+          width: 46%
+          margin: 8rem 2% 8.5rem
+          float: left
 
-// @media only screen and (max-width: 768px)
-//   .container
-//     // width: 740px
-//     // padding-right: 20px
-//     // padding-left: 20px
+          &:last-child
+            float: right
+
+        @media only screen and (max-width: $sm-screen)
+          h1
+            text-align: center
+          .col
+            width: 98%
+            float: none
+            margin-top: 0
+            margin-bottom: 2rem
+
+            &:last-child
+              float: none
+              margin-bottom: 8rem
