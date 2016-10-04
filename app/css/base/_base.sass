@@ -11,13 +11,14 @@ html
   overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
-  height: 2000px
+  height: 5000px
 
-  .animation
+  .red-monster-anim,
+  .purple-monster-anim
     opacity: 0
-
     &.animated
       opacity: 1
+
 
 
   .cf:before,
@@ -59,7 +60,8 @@ html
             float: right
 
         @media only screen and (max-width: $sm-screen)
-          h1
+          h1,
+          p
             text-align: center
           .col
             width: 98%
