@@ -33,6 +33,15 @@ $(function(){
   onScrollInit( $('.red-monster-anim'), $('#about') );
   onScrollInit( $('.purple-monster-anim'), $('#color') );
 
+  function bgColorChange(){
+    $('.colors-box').hover(function(){
+      $(this).parent().parent().parent().parent().css('background-color', $(this).data('color'));
+    }, function(){
+        $(this).parent().parent().parent().parent().css('background-color', $(this).parent().parent().parent().parent().data('bg-color'));
+    });
+  }
+  bgColorChange();
+
 });
 
 

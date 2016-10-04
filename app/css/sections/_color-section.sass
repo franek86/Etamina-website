@@ -3,19 +3,34 @@ section#color
   position: relative
   background:
     color: pink
+  transition: background-color 200ms ease-in-out
 
   .color-heading
     h1
       color: $white
 
   .color-content
-    margin-top: calc(50% - 120px)
     position: relative
+    text-align: center
 
     .cloudlet
       border: 5px solid white
       padding: 15px
       border-radius: 35px 35px 35px 0px
+
+  ul.colors-boxes
+    display: block
+    margin-top: 100px
+    text-align: center
+
+    li.colors-box
+      display: inline-block
+      margin-right: 40px
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: #916f8a
+      cursor: pointer
 
 
   .monsters
@@ -24,6 +39,10 @@ section#color
 
     img.purple-monster
       width: 100%
+
+  .popUpLeft
+    animation-name: popUpLeft
+
 
   @media only screen and (max-width: $sm-screen)
     .color-content
@@ -39,3 +58,14 @@ section#color
 
       img.purple-monster
         width: 70%
+
+
+@keyframes popUpLeft
+  0%
+    transform: (translate3d(-100%,50%,0) scale(.5))
+    opacity: 0
+  50%
+    opacity: 0
+  100%
+    transform: (translate3d(0%,30%,0) scale(1))
+    opacity: 1

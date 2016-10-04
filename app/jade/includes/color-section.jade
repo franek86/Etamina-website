@@ -1,4 +1,4 @@
-section#color.cf
+section#color.cf(data-bg-color="pink")
 
   .container.cf
   
@@ -6,12 +6,17 @@ section#color.cf
       h1 Colors
       
     .col
-      .monsters.purple-monster-anim(data-animation-name="fadeInLeft" data-animation-delay="1s")
+      .monsters.purple-monster-anim(data-animation-name="fadeInLeft" data-animation-delay=".2s")
         image(src="img/purple-alien.svg" class="purple-monster")
     
     .col
       .color-content
-        .cloudlet.purple-monster-anim(data-animation-name="fadeInRight" data-animation-delay="1.5s")
+        .cloudlet.purple-monster-anim(data-animation-name="popUpLeft" data-animation-delay="1s")
           p Mixtape glossier enim, consectetur semiotics master cleanse wolf sunt edison bulb post-ironic intelligentsia ullamco 3 wolf moon. 
         
+      ul.colors-boxes
+        li.colors-box(data-color="#f4696b")
+        li.colors-box(data-color="#f99dea")
+        li.colors-box(data-color="#bf740b")
+        li.colors-box(data-color="#7c8961")
       
