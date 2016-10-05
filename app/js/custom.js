@@ -1,5 +1,14 @@
 $(function(){
 
+//PREDOLADER
+  $(window).on("load",function(){
+
+      $('.preloader').delay(500).fadeOut("slow").remove();
+      $('.intro').fadeIn("slow");
+
+  });
+
+//COUNTING PREDOLADER NUMBERS
   var percent = $.animateNumber.numberStepFactories.append(' %');
 
   $('.num').prop("number", 0).animateNumber({
@@ -7,7 +16,7 @@ $(function(){
     numberStep: percent
   },1500);
 
-
+//ANIMATION ELEMENTS WHEN SCROLL
   function onScrollInit( items, trigger ) {
     items.each( function() {
       var osElement = $(this),
@@ -33,21 +42,12 @@ $(function(){
   onScrollInit( $('.red-monster-anim'), $('#about') );
   onScrollInit( $('.purple-monster-anim'), $('#color') );
 
+// SELECT BG COLORS
   function bgColorChange(){
-    $('.colors-box').hover(function(){
-      $(this).parent().parent().parent().parent().css('background-color', $(this).data('color'));
-    }, function(){
-        $(this).parent().parent().parent().parent().css('background-color', $(this).parent().parent().parent().parent().data('bg-color'));
+    $('.colors-box').click(function(){
+       $(this).parents().eq(5).css('background-color', $(this).data('color'));
     });
   }
   bgColorChange();
-
-});
-
-
-$(window).on("load",function(){
-
-    $('.preloader').delay(500).fadeOut("slow").remove();
-    $('.intro').fadeIn("slow");
 
 });

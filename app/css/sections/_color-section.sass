@@ -2,7 +2,7 @@ section#color
   height: auto
   position: relative
   background:
-    color: pink
+    color: $light-blue
   transition: background-color 200ms ease-in-out
 
   .color-heading
@@ -17,21 +17,41 @@ section#color
       border: 5px solid white
       padding: 15px
       border-radius: 35px 35px 35px 0px
+      text-align: center
 
-  ul.colors-boxes
-    display: block
-    margin-top: 100px
-    text-align: center
+      ul.colors-boxes
+        display: block
+        text-align: center
 
-    li.colors-box
-      display: inline-block
-      margin-right: 40px
-      width: 40px
-      height: 40px
-      border-radius: 50%
-      background-color: #916f8a
-      cursor: pointer
+        li.colors-box
+          display: inline-block
+          margin-right: 40px
+          margin-bottom: 30px
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          cursor: pointer
 
+          &:nth-child(1)
+            background-color: #f4696b
+          &:nth-child(2)
+            background-color: #85a7c1
+          &:nth-child(3)
+            background-color: #846FA3
+          &:nth-child(4)
+            background-color: #7c8961
+          &:nth-child(5)
+            background-color: #EFCC9C
+          &:nth-child(6)
+            background-color: #afd4b3
+          &:nth-child(7)
+            background-color: #CCA39C
+          &:nth-child(8)
+            background-color: #01233f
+          &:nth-child(9)
+            background-color: #647777
+          &:nth-child(10)
+            background-color: #48002F
 
   .monsters
     position: relative
