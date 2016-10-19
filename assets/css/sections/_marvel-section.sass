@@ -1,0 +1,25 @@
+section#marvel
+  background:
+    color: #5f3e44
+
+  .animMarvel
+    padding: 30px 0
+    .path
+      fill: transparent
+      stroke-dasharray: 2550
+      stroke-dashoffset: -2550
+
+      &.js-dash
+        animation: dash 30s ease forwards
+
+
+@media only screen and (max-width: $sm-screen)
+  section#marvel
+    height: auto
+    
+
+@keyframes dash
+  0%
+    stroke-dashoffset: 2550
+  100%
+    stroke-dashoffset: 0
