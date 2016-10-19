@@ -13,12 +13,17 @@ html
   -webkit-text-size-adjust: 100%
   height: 5000px
 
+  @media only screen and (max-width: $sm-screen)
+      html,
+      body
+      font-size: 11px
+
   .red-monster-anim,
-  .purple-monster-anim
+  .purple-monster-anim,
+  .marvel-animation
     opacity: 0
     &.animated
       opacity: 1
-
 
 
   .cf:before,
@@ -38,7 +43,7 @@ html
     margin-bottom: 0
 
     section
-      height: 95vh
+      height: 98vh
       position: relative
       padding-top: 4rem
 
@@ -71,4 +76,4 @@ html
 
             &:last-child
               float: none
-              margin-bottom: 8rem
+              padding-bottom: 8rem

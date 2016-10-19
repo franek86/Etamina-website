@@ -41,6 +41,8 @@ $(function(){
   }
   onScrollInit( $('.red-monster-anim'), $('#about') );
   onScrollInit( $('.purple-monster-anim'), $('#color') );
+  onScrollInit( $('.marvel-animation'), $('#marvel') );
+
 
 // SELECT BG COLORS
   function bgColorChange(){
@@ -49,5 +51,15 @@ $(function(){
     });
   }
   bgColorChange();
+
+// LINE SVG ANIMATION
+  function lineAnimation(){
+    var div = $('#marvel');
+
+    div.waypoint(function(){
+      $('.animMarvel .path').addClass('js-dash');
+    });
+  }
+  lineAnimation();
 
 });
