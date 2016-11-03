@@ -18,17 +18,33 @@ html.no-js(lang='en')
     // custom css style
     link(rel='stylesheet', href='assets/css/main.min.css')
     
-  
-
     body
-        include includes/preloader.jade
+        //- include includes/preloader.jade
+        .preloader
+          .intro
+            .num 0%
+
         
         .wrapper
           include includes/home-section.jade
           include includes/about-section.jade
           include includes/color-section.jade
           include includes/marvel-section.jade
+          
+          
+    // all javascript from gulp task 'scripts'
+    script(src='assets/js/all.js')
+    
+    script(type='text/javascript').
+      $(window).on("load",function(){
+      $('.preloader').delay(5000).fadeOut("slow");
+      $('body').delay(5000).css({'overflow':'visible'});
+      });
+      var percent = $.animateNumber.numberStepFactories.append(' %');
+      $('.num').prop("number", 0).animateNumber({
+      number: 100,
+      numberStep: percent
+      },5000);
       
-        // all javascript from gulp task 'scripts'
-        script(src='assets/js/all.js')
+        
         

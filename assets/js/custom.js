@@ -1,21 +1,5 @@
 $(function(){
-
-//PREDOLADER
-  $(window).on("load",function(){
-
-      $('.preloader').delay(500).fadeOut("slow").remove();
-      $('.intro').fadeIn("slow");
-
-  });
-
-//COUNTING PREDOLADER NUMBERS
-  var percent = $.animateNumber.numberStepFactories.append(' %');
-
-  $('.num').prop("number", 0).animateNumber({
-    number: 100,
-    numberStep: percent
-  },1500);
-
+  
 //ANIMATION ELEMENTS WHEN SCROLL
   function onScrollInit( items, trigger ) {
     items.each( function() {
